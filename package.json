@@ -1,0 +1,25 @@
+{
+  "name": "@rentsons/shared-types",
+  "version": "0.0.1",
+  "author": "Rent Sons",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RentSonsDev/shared-types.git"
+  },
+  "scripts": {
+    "prepare" : "npm run build",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "build"
+  ]
+}
