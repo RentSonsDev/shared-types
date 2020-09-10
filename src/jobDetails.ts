@@ -54,7 +54,7 @@ export type JobDetailsExteriorPainting = JobDetailsCommon & {
   doesWoodNeedReplacing: boolean;
 };
 
-export type JobDetailsCleaningAndJunk = JobDetailsCommon & {
+export type JobDetailsJunkRemoval = JobDetailsCommon & {
   numOfHours: number;
   needsUhaul: number;
   distanceFromLandfill: number;
@@ -70,5 +70,5 @@ export type JobDetails = Partial<JobDetailsMoving> &
   Partial<JobDetailsLandscaping> &
   Partial<JobDetailsInteriorPainting> &
   Partial<JobDetailsExteriorPainting> &
-  Partial<JobDetailsCleaningAndJunk> &
+  Partial<JobDetailsJunkRemoval> &
   Partial<JobDetailsSonAssistance>;
