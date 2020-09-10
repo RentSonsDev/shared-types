@@ -3,7 +3,7 @@ export type JobDetailsCommon = {
   description?: string;
 };
 
-type MoveType = "newLocation" | "inHome" | "truckLoading" | "packing";
+type MoveType = 'newLocation' | 'inHome' | 'truckLoading' | 'packing';
 
 export type JobDetailsMoving = JobDetailsCommon & {
   estimatedMilesDriven?: number;
