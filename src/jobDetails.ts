@@ -1,13 +1,14 @@
 export type JobDetailsCommon = {
   numOfSons: number;
+  description?: string;
 };
 
-type MoveType = "newLocation" | "inHome" | "truckLoading" | "packing";
+type MoveType = 'newLocation' | 'inHome' | 'truckLoading' | 'packing';
 
 export type JobDetailsMoving = JobDetailsCommon & {
   estimatedMilesDriven?: number;
   distanceBetweenLocations?: number;
-  estimatedHours: number;
+  numOfHours: number;
   needsFurnitureAssembly?: boolean;
   needsPacking?: boolean;
   needsUhaul?: number;
@@ -17,7 +18,7 @@ export type JobDetailsMoving = JobDetailsCommon & {
 };
 
 export type JobDetailsLandscaping = JobDetailsCommon & {
-  estimatedHours: number;
+  numOfHours: number;
   needsTools: boolean;
   needsTruck: boolean;
   distanceFromLandfill?: number;
@@ -40,18 +41,17 @@ export type JobDetailsExteriorPainting = JobDetailsCommon & {
   lengthOfHome: number;
   widthOfHome: number;
   numOfStories: number;
-  isThereMoldOrMildew: boolean;
+  hasMoldOrMildew: boolean;
   levelOfFlakingPaint: string;
-  isThereWoodToBeReplaced: boolean;
+  needsWoodReplacement: boolean;
   linearFeetOfTrim: number;
   numOfWindows: number;
   numOfWindowUnits: number;
   numOfDoors: number;
   numOfGarageDoors: number;
   linearFeetOfRailing: number;
-  howMuchPrepRequired: string;
-  squareFootageOfTheDeck: number;
-  doesWoodNeedReplacing: boolean;
+  prepRequired: string;
+  deckSquareFootage: number;
 };
 
 export type JobDetailsJunkRemoval = JobDetailsCommon & {
@@ -62,7 +62,7 @@ export type JobDetailsJunkRemoval = JobDetailsCommon & {
 
 export type JobDetailsSonAssistance = JobDetailsCommon & {
   numOfHours: number;
-  jobType: string;
+  assistanceType: string;
   toolsNeeded: string;
 };
 
