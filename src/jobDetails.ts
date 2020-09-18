@@ -21,7 +21,7 @@ export type JobDetailsLandscaping = JobDetailsCommon & {
   numOfHours: number;
   needsTools: boolean;
   needsTruck: boolean;
-  distanceFromLandfill?: number;
+  needsLandfill: boolean;
 };
 
 export type JobDetailsInteriorPainting = JobDetailsCommon & {
