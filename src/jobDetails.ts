@@ -21,6 +21,7 @@ export type JobDetailsLandscaping = JobDetailsCommon & {
   needsTools: boolean;
   needsTruck: boolean;
   distanceFromLandfill?: number;
+  landscapingType: string;
 };
 
 export type JobDetailsInteriorPainting = JobDetailsCommon & {
