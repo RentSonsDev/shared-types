@@ -38,3 +38,15 @@ export const allJobTypes: JobType[] = [
     name: 'Son Assistance'
   },
 ];
+
+export function isValidJobType(slug: string): boolean {
+  return allJobTypes.find(j => j.slug === slug) !== undefined;
+}
+
+export function getJobType(slug: string): JobType | null {
+  return allJobTypes.find(j => j.slug === slug) ?? null;
+}
+
+export function getJobTypeFromLegacyType(legacyType: string): JobType | null {
+  return allJobTypes.find(j => j.name === legacyType) ?? null;
+}
