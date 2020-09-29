@@ -68,7 +68,7 @@ export type JobDetailsOtherAssistance = JobDetailsCommon & {
   numOfHours: number;
   needsTruck?: boolean;
   needsPowerWasher?: boolean;
-  needsTools?: boolean;
+  needsHandykit?: boolean;
 };
 
 export type JobDetails = Partial<JobDetailsMoving> &
