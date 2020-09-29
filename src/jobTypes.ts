@@ -4,7 +4,7 @@ export type JobTypeSlug =
   'exterior-painting' |
   'landscaping' |
   'junk-removal' |
-  'son-assistance'
+  'other-assistance'
 ;
 
 export type JobType = {
@@ -34,8 +34,8 @@ export const allJobTypes: JobType[] = [
     name: 'Junk Removal'
   },
   {
-    slug: 'son-assistance',
-    name: 'Son Assistance'
+    slug: 'other-assistance',
+    name: 'Other Assistance'
   },
 ];
 
