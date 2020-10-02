@@ -28,16 +28,19 @@ export type JobDetailsLandscaping = JobDetailsCommon & {
 };
 
 export type JobDetailsInteriorPainting = JobDetailsCommon & {
+  needsNoPrep: boolean;
+  needsSomePrep: boolean;
+  needsFullPrep: boolean;
+  needsTools: boolean;
+  needsGoodPaint: boolean;
+  needsQualityPaint: boolean;
   numOfRooms: number;
-  jobPrepLevel: number;
-  numOfWallSections: number;
+  numOfWalls: number;
   numOfCeilings: number;
-  numOfTrimOrCrown: number;
+  numOfTrimSections: number;
   numOfWindows: number;
   numOfClosets: number;
   numOfDoors: number;
-  needsTools: boolean;
-  needsPaint: boolean;
 };
 
 export type JobDetailsExteriorPainting = JobDetailsCommon & {
