@@ -4,6 +4,8 @@ export type JobDetailsCommon = {
 };
 
 type MoveType = 'newLocation' | 'inHome' | 'truckLoading' | 'packing';
+type OtherAssistanceType = 'tech' | 'packing' | 'furniture' | 'powerwashing' | 'errand';
+type LandscapingType = 'generalGardening' | 'seasonalCleanup' | 'brushCleanup' | 'other';
 
 export type JobDetailsMoving = JobDetailsCommon & {
   estimatedMilesDriven?: number;
@@ -18,11 +20,11 @@ export type JobDetailsMoving = JobDetailsCommon & {
 };
 
 export type JobDetailsLandscaping = JobDetailsCommon & {
+  landscapingType: LandscapingType;
   numOfHours: number;
   needsTools: boolean;
   needsTruck: boolean;
-  needsLandfill: boolean;
-  landscapingType: string;
+  needsLandfill?: boolean;
 };
 
 export type JobDetailsInteriorPainting = JobDetailsCommon & {
@@ -61,10 +63,12 @@ export type JobDetailsJunkRemoval = JobDetailsCommon & {
   distanceFromLandfill: number;
 };
 
-export type JobDetailsSonAssistance = JobDetailsCommon & {
+export type JobDetailsOtherAssistance = JobDetailsCommon & {
+  assistanceType: OtherAssistanceType;
   numOfHours: number;
-  assistanceType: string;
-  toolsNeeded: string;
+  needsTruck?: boolean;
+  needsPowerWasher?: boolean;
+  needsHandykit?: boolean;
 };
 
 export type JobDetails = Partial<JobDetailsMoving> &
@@ -72,4 +76,4 @@ export type JobDetails = Partial<JobDetailsMoving> &
   Partial<JobDetailsInteriorPainting> &
   Partial<JobDetailsExteriorPainting> &
   Partial<JobDetailsJunkRemoval> &
-  Partial<JobDetailsSonAssistance>;
+  Partial<JobDetailsOtherAssistance>;
