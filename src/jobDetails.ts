@@ -59,8 +59,8 @@ export type JobDetailsExteriorPainting = JobDetailsCommon & {
 
 export type JobDetailsJunkRemoval = JobDetailsCommon & {
   numOfHours: number;
-  needsUhaul: number;
-  distanceFromLandfill: number;
+  needsTruck: boolean;
+  needsLandfill?: boolean;
 };
 
 export type JobDetailsOtherAssistance = JobDetailsCommon & {
