@@ -1,5 +1,5 @@
 export type JobDetailsCommon = {
-  numOfSons: number;
+  numOfSons?: number;
   description?: string;
 };
 
@@ -8,15 +8,15 @@ type OtherAssistanceType = 'tech' | 'packing' | 'furniture' | 'powerwashing' | '
 type LandscapingType = 'generalGardening' | 'seasonalCleanup' | 'brushCleanup' | 'other';
 
 export type JobDetailsMoving = JobDetailsCommon & {
-  estimatedMilesDriven?: number;
-  distanceBetweenLocations?: number;
-  numOfHours: number;
-  needsFurnitureAssembly?: boolean;
-  needsPacking?: boolean;
-  needsUhaul?: number;
-  numOfFloors?: boolean;
-  numOfRooms: number;
   typeOfMove: MoveType;
+  numOfRooms?: number;
+  numOfHours?: number;
+  numOfFloors?: number;
+  needsFurnitureAssembly?: boolean;
+  needsTruck?: boolean;
+  needsSupplies?: boolean;
+  needsPacking?: boolean;
+  drivingHours?: number;
 };
 
 export type JobDetailsLandscaping = JobDetailsCommon & {
